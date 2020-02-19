@@ -2,8 +2,9 @@ const express = require('express')
 const app = express()
 const port = 5000
 const fetch = require('node-fetch')
+require('dotenv').config()
 
-const url = 'https://api.github.com/users/'
+const url = process.env.EXPRESS_URL
 
 app.use(express.static('client'))
 
